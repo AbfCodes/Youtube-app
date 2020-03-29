@@ -1,7 +1,7 @@
 <template>
   <div
     class="fl navbar navbar-expand-lg navbar navbar-dark bg-dark"
-    style="background-color: #212121;"
+    style="background-color: #202020;"
   >
     <button
       class="navbar-toggler"
@@ -21,12 +21,13 @@
         placeholder="Search"
         autofocus
         v-model="querytext"
+        @keyup.enter="onInput"
       />
       <div class="input-group-append">
         <button
           class="input-group-text btn"
           style="padding:10px 28px;"
-          @click="onInput"
+          @click.self="onInput"
         >
           <svg
             class="bi bi-search"
@@ -73,13 +74,19 @@ export default {
 </script>
 
 <style scoped>
-input {
+input[type='text'] {
   width: 75%;
+  color: whitesmoke;
+  background-color: #181a1b;
+}
+button {
+  background-color: #181a1b;
 }
 div {
   text-align: center;
 }
 .fl {
   display: flex;
+  align-items: center;
 }
 </style>

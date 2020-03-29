@@ -34,8 +34,10 @@ li {
   cursor: pointer;
   overflow: hidden;
   text-overflow: ellipsis;
+  background-color: #181818;
+  color: #c9b3a2;
 }
 li:hover {
-  background-color: #eee;
+  background-color: #1d1f20;
 }
 </style>

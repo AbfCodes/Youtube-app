@@ -64,5 +64,6 @@ body {
   padding: 0;
   box-sizing: border-box;
   overflow-x: hidden;
+  background-color: #181818;
 }
 </style>
