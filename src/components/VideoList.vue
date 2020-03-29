@@ -1,12 +1,12 @@
 <template>
-  <div>
+  <ul class="float-left col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
     <video-list-item
       v-for="video in allVideos"
       :video="video"
       :key="video.etag"
       @videoSelect="onVideoSelect"
     ></video-list-item>
-  </div>
+  </ul>
 </template>
 
 <script>

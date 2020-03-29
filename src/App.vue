@@ -1,13 +1,14 @@
 <template>
-  <div class="container">
+  <div>
     <Searchbar @valCh="onvalCh"></Searchbar>
+
     <div class="row">
       <video-detail :video="selectedVideo"></video-detail>
       <video-list :allVideos="videos" @videoSelect="onVideoSelect"></video-list>
     </div>
   </div>
 </template>
- 
+
 <script>
 import axios from 'axios';
 
@@ -28,6 +29,7 @@ export default {
   methods: {
     onvalCh(val) {
       this.queryText = val;
+      // console.log(this.queryText);
       axios
         .get('https://www.googleapis.com/youtube/v3/search', {
           params: {
@@ -35,7 +37,7 @@ export default {
             type: 'video',
             part: 'snippet',
             q: this.queryText,
-            maxResults: 5
+            maxResults: 10
           }
         })
         .then(res => {
@@ -51,4 +53,12 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+</style>

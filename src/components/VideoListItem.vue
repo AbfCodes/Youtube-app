@@ -1,16 +1,14 @@
 <template>
-  <div>
-    <li class="list-group-item media" @click="onVideoSelect">
-      <img :src="thumbnailUrl" class="mr-3" alt="thumbnail icon" />
-      <div class="media-body">
-        <strong>{{ video.snippet.title }}</strong>
-        <!-- <hr /> -->
-        <span class="text-black mt-3 d-block">{{
-          video.snippet.channelTitle
-        }}</span>
-      </div>
-    </li>
-  </div>
+  <li class="list-group-item media" @click="onVideoSelect">
+    <img :src="thumbnailUrl" class="mr-3" alt="thumbnail icon" />
+    <div class="media-body">
+      <strong>{{ video.snippet.title }}</strong>
+      <!-- <hr /> -->
+      <span class="text-black mt-3 d-block">{{
+        video.snippet.channelTitle
+      }}</span>
+    </div>
+  </li>
 </template>
 
 <script>

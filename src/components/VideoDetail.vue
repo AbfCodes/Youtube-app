@@ -1,7 +1,11 @@
 <template>
-  <div class="col-md-8" v-if="video">
+  <div
+    class="float-right col-xs-12 col-sm-12 col-md-8 col-lg-8 col-xl-8 "
+    v-if="video"
+  >
     <div class="embed-responsive embed-responsive-16by9">
       <iframe
+        class="mt-3 ml-5"
         width="860"
         height="484"
         :src="selectedVideoURL"
@@ -10,7 +14,7 @@
         allowfullscreen
       ></iframe>
     </div>
-    <div class="details mt-2 p-2">
+    <div class="details mt-2 p-2 ml-5">
       <h4>{{ video.snippet.title }}</h4>
       <p>{{ video.snippet.description }}</p>
     </div>
