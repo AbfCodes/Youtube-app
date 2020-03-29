@@ -4,7 +4,7 @@
     <div class="media-body">
       <strong>{{ video.snippet.title }}</strong>
       <!-- <hr /> -->
-      <span class="text-black mt-3 d-block">{{
+      <span class="text-black mt-2 d-block">{{
         video.snippet.channelTitle
       }}</span>
     </div>
@@ -32,6 +32,8 @@ export default {
 li {
   display: flex;
   cursor: pointer;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 li:hover {
   background-color: #eee;

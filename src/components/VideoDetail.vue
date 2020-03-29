@@ -1,11 +1,10 @@
 <template>
   <div
-    class="float-right col-xs-12 col-sm-12 col-md-8 col-lg-8 col-xl-8 "
+    class="float-right col-xs-12 col-sm-12 col-md-7 col-lg-8 col-xl-8 "
     v-if="video"
   >
-    <div class="embed-responsive embed-responsive-16by9">
+    <div class="embed-responsive embed-responsive-16by9 mt-3 ml-5">
       <iframe
-        class="mt-3 ml-5"
         width="860"
         height="484"
         :src="selectedVideoURL"

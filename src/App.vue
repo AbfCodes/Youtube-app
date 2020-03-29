@@ -4,7 +4,11 @@
 
     <div class="row">
       <video-detail :video="selectedVideo"></video-detail>
-      <video-list :allVideos="videos" @videoSelect="onVideoSelect"></video-list>
+      <video-list
+        :ifVideo="selectedVideo"
+        :allVideos="videos"
+        @videoSelect="onVideoSelect"
+      ></video-list>
     </div>
   </div>
 </template>
